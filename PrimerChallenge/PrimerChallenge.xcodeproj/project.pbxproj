@@ -26,6 +26,18 @@
 		B495F78525C87764003A5AD5 /* CompositionalCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F78425C87764003A5AD5 /* CompositionalCollectionView.swift */; };
 		B495F78825C878D8003A5AD5 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F78725C878D8003A5AD5 /* RepositoryCell.swift */; };
 		B495F78C25C87E23003A5AD5 /* Array+Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F78B25C87E23003A5AD5 /* Array+Element.swift */; };
+		B495F79125C8846B003A5AD5 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F79025C8846B003A5AD5 /* Method.swift */; };
+		B495F79525C8847A003A5AD5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F79425C8847A003A5AD5 /* NetworkError.swift */; };
+		B495F79825C88493003A5AD5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F79725C88493003A5AD5 /* Request.swift */; };
+		B495F79B25C88950003A5AD5 /* DecodeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F79A25C88950003A5AD5 /* DecodeStrategy.swift */; };
+		B495F79E25C88965003A5AD5 /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F79D25C88965003A5AD5 /* Body.swift */; };
+		B495F7A125C8897E003A5AD5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7A025C8897E003A5AD5 /* Status.swift */; };
+		B495F7A525C889ED003A5AD5 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7A425C889ED003A5AD5 /* Loader.swift */; };
+		B495F7A825C88A0C003A5AD5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7A725C88A0C003A5AD5 /* Response.swift */; };
+		B495F7AB25C88A27003A5AD5 /* BaseLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7AA25C88A27003A5AD5 /* BaseLoader.swift */; };
+		B495F7AE25C88A70003A5AD5 /* URLLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7AD25C88A70003A5AD5 /* URLLoader.swift */; };
+		B495F7B225C88A95003A5AD5 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7B125C88A95003A5AD5 /* URLSession.swift */; };
+		B495F7B625C88AD8003A5AD5 /* RequestModifyingLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7B525C88AD8003A5AD5 /* RequestModifyingLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +86,18 @@
 		B495F78425C87764003A5AD5 /* CompositionalCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalCollectionView.swift; sourceTree = "<group>"; };
 		B495F78725C878D8003A5AD5 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		B495F78B25C87E23003A5AD5 /* Array+Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Element.swift"; sourceTree = "<group>"; };
+		B495F79025C8846B003A5AD5 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		B495F79425C8847A003A5AD5 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B495F79725C88493003A5AD5 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B495F79A25C88950003A5AD5 /* DecodeStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeStrategy.swift; sourceTree = "<group>"; };
+		B495F79D25C88965003A5AD5 /* Body.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
+		B495F7A025C8897E003A5AD5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		B495F7A425C889ED003A5AD5 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		B495F7A725C88A0C003A5AD5 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B495F7AA25C88A27003A5AD5 /* BaseLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoader.swift; sourceTree = "<group>"; };
+		B495F7AD25C88A70003A5AD5 /* URLLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLLoader.swift; sourceTree = "<group>"; };
+		B495F7B125C88A95003A5AD5 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		B495F7B525C88AD8003A5AD5 /* RequestModifyingLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModifyingLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +181,7 @@
 		B495F76325C871FB003A5AD5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B495F78E25C883AE003A5AD5 /* Networking */,
 				B495F77C25C876AC003A5AD5 /* Extensions */,
 				B495F76425C87200003A5AD5 /* DiffableSection */,
 			);
@@ -208,6 +233,49 @@
 				B495F78B25C87E23003A5AD5 /* Array+Element.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B495F78E25C883AE003A5AD5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B495F7B025C88A8B003A5AD5 /* Session */,
+				B495F7A325C889E2003A5AD5 /* Loader */,
+				B495F78F25C88453003A5AD5 /* HTTP */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B495F78F25C88453003A5AD5 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				B495F79025C8846B003A5AD5 /* Method.swift */,
+				B495F79425C8847A003A5AD5 /* NetworkError.swift */,
+				B495F79725C88493003A5AD5 /* Request.swift */,
+				B495F79A25C88950003A5AD5 /* DecodeStrategy.swift */,
+				B495F79D25C88965003A5AD5 /* Body.swift */,
+				B495F7A025C8897E003A5AD5 /* Status.swift */,
+				B495F7A725C88A0C003A5AD5 /* Response.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		B495F7A325C889E2003A5AD5 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				B495F7A425C889ED003A5AD5 /* Loader.swift */,
+				B495F7AA25C88A27003A5AD5 /* BaseLoader.swift */,
+				B495F7AD25C88A70003A5AD5 /* URLLoader.swift */,
+				B495F7B525C88AD8003A5AD5 /* RequestModifyingLoader.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		B495F7B025C88A8B003A5AD5 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				B495F7B125C88A95003A5AD5 /* URLSession.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,12 +404,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B495F79125C8846B003A5AD5 /* Method.swift in Sources */,
 				B495F76625C87267003A5AD5 /* DiffableSection.swift in Sources */,
 				B495F76C25C872BD003A5AD5 /* BaseDiffableSection.swift in Sources */,
+				B495F79E25C88965003A5AD5 /* Body.swift in Sources */,
+				B495F7A825C88A0C003A5AD5 /* Response.swift in Sources */,
 				B495F78C25C87E23003A5AD5 /* Array+Element.swift in Sources */,
 				B495F78225C8772D003A5AD5 /* UIEdgeInsets+Init.swift in Sources */,
 				B495F76925C8728C003A5AD5 /* DiffableDataSource.swift in Sources */,
+				B495F79525C8847A003A5AD5 /* NetworkError.swift in Sources */,
+				B495F79B25C88950003A5AD5 /* DecodeStrategy.swift in Sources */,
+				B495F7A125C8897E003A5AD5 /* Status.swift in Sources */,
+				B495F79825C88493003A5AD5 /* Request.swift in Sources */,
 				B495F78525C87764003A5AD5 /* CompositionalCollectionView.swift in Sources */,
+				B495F7AB25C88A27003A5AD5 /* BaseLoader.swift in Sources */,
+				B495F7B225C88A95003A5AD5 /* URLSession.swift in Sources */,
+				B495F7A525C889ED003A5AD5 /* Loader.swift in Sources */,
+				B495F7AE25C88A70003A5AD5 /* URLLoader.swift in Sources */,
+				B495F7B625C88AD8003A5AD5 /* RequestModifyingLoader.swift in Sources */,
 				B495F77E25C876E1003A5AD5 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
