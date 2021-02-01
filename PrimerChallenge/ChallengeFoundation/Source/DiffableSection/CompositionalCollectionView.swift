@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public final class CompositionalCollectionView: UICollectionView {
-    init(frame: CGRect, sections: [DiffableSection]) {
+    public init(frame: CGRect, sections: [DiffableSection]) {
         super.init(frame: frame, collectionViewLayout: UICollectionViewCompositionalLayout {
             (section, environment) in
             return sections[section].layout(for: environment)

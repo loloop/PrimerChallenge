@@ -38,6 +38,7 @@ final class MainCoordinatingController: UIViewController {
 
 extension MainCoordinatingController: UserSearchViewDelegate {
     func userSearchView(didSearchFor name: String) {
-        navigationController?.show(UIViewController(), sender: nil)
+        let controller = UserDetailsViewController()
+        navigationController?.show(controller, sender: nil)
     }
 }

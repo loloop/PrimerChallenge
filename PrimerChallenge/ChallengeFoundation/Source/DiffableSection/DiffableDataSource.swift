@@ -10,11 +10,11 @@ import UIKit
 
 final public class DiffableDataSource: NSObject {
 
-    var currentSnapshot: NSDiffableDataSourceSnapshot<AnyHashable, AnyHashable> = .init()
-    var dataSource: UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>?
-    var sections: [DiffableSection]
+    public var currentSnapshot: NSDiffableDataSourceSnapshot<AnyHashable, AnyHashable> = .init()
+    public var dataSource: UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>?
+    public var sections: [DiffableSection]
 
-    init(sections: [DiffableSection], on collection: UICollectionView) {
+    public init(sections: [DiffableSection], on collection: UICollectionView) {
         self.sections = sections
         super.init()
         bindDataSource(to: collection)
@@ -34,7 +34,7 @@ final public class DiffableDataSource: NSObject {
         }
     }
 
-    func updateSnapshot() {
+    public func updateSnapshot() {
         guard let source = dataSource else { return }
 
         var newSnapshot = NSDiffableDataSourceSnapshot<AnyHashable, AnyHashable>()
