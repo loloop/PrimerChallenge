@@ -59,4 +59,9 @@ extension DiffableDataSource: UICollectionViewDelegate {
         guard let section = sections[indexPath.section] as? UICollectionViewDelegate else { return }
         section.collectionView?(collectionView, willDisplay: cell, forItemAt: indexPath)
     }
+
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let section = sections[indexPath.section] as? UICollectionViewDelegate else { return }
+        section.collectionView?(collectionView, didSelectItemAt: indexPath)
+    }
 }

@@ -25,6 +25,7 @@
 		B495F78225C8772D003A5AD5 /* UIEdgeInsets+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F78125C8772D003A5AD5 /* UIEdgeInsets+Init.swift */; };
 		B495F78525C87764003A5AD5 /* CompositionalCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F78425C87764003A5AD5 /* CompositionalCollectionView.swift */; };
 		B495F78825C878D8003A5AD5 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F78725C878D8003A5AD5 /* RepositoryCell.swift */; };
+		B495F78C25C87E23003A5AD5 /* Array+Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F78B25C87E23003A5AD5 /* Array+Element.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		B495F78125C8772D003A5AD5 /* UIEdgeInsets+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Init.swift"; sourceTree = "<group>"; };
 		B495F78425C87764003A5AD5 /* CompositionalCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalCollectionView.swift; sourceTree = "<group>"; };
 		B495F78725C878D8003A5AD5 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		B495F78B25C87E23003A5AD5 /* Array+Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Element.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			children = (
 				B495F77D25C876E1003A5AD5 /* UIView+Constraints.swift */,
 				B495F78125C8772D003A5AD5 /* UIEdgeInsets+Init.swift */,
+				B495F78B25C87E23003A5AD5 /* Array+Element.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			files = (
 				B495F76625C87267003A5AD5 /* DiffableSection.swift in Sources */,
 				B495F76C25C872BD003A5AD5 /* BaseDiffableSection.swift in Sources */,
+				B495F78C25C87E23003A5AD5 /* Array+Element.swift in Sources */,
 				B495F78225C8772D003A5AD5 /* UIEdgeInsets+Init.swift in Sources */,
 				B495F76925C8728C003A5AD5 /* DiffableDataSource.swift in Sources */,
 				B495F78525C87764003A5AD5 /* CompositionalCollectionView.swift in Sources */,

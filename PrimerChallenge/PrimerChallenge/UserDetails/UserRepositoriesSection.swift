@@ -9,10 +9,20 @@ import Foundation
 import UIKit
 import ChallengeFoundation
 
+protocol UserRepositoriesSectionDelegate: AnyObject {
+    func userRepositoriesSection(didSelect item: String)
+}
+
 final class UserRepositoriesSection: BaseDiffableSection {
 
     private lazy var repositoryCellRegistration = UICollectionView.CellRegistration<RepositoryCell, String> { (cell, indexPath, model) in
         cell.setupCell(with: model)
+    }
+
+    private weak var delegate: UserRepositoriesSectionDelegate?
+
+    init(delegate: UserRepositoriesSectionDelegate) {
+        self.delegate = delegate
     }
 
     override func dequeueReusableCell(_ collectionView: UICollectionView, for indexPath: IndexPath, item: AnyHashable) -> UICollectionViewCell? {
@@ -35,9 +45,19 @@ final class UserRepositoriesSection: BaseDiffableSection {
         return NSCollectionLayoutSection(group: group)
     }
 
-    override var items: [AnyHashable] {
-        ["these", "are", "placeholder", "cells", "for", "testing"]
+    var currentItems: [String] = ["these", "are", "placeholder", "cells", "for", "testing", "https://github.com/CocoaHeadsConference/CocoaHeadsConference.github.io", "https://github.com/CocoaHeadsConference/CHConferenceApp"]
+    override var items: [AnyHashable] { currentItems }
+
+}
+
+extension UserRepositoriesSection: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard
+            let item = currentItems.element(at: indexPath.item),
+            let delegate = delegate
+        else { return }
+
+        delegate.userRepositoriesSection(didSelect: item)
+
     }
-
-
 }

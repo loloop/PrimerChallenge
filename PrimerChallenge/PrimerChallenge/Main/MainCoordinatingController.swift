@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SwiftUI
+import SafariServices
 
 final class MainCoordinatingController: UIViewController {
 
@@ -38,7 +39,14 @@ final class MainCoordinatingController: UIViewController {
 
 extension MainCoordinatingController: UserSearchViewDelegate {
     func userSearchView(didSearchFor name: String) {
-        let controller = UserDetailsViewController()
+        let controller = UserDetailsViewController(delegate: self)
         navigationController?.show(controller, sender: nil)
+    }
+}
+
+extension MainCoordinatingController: UserDetailsViewControllerDelegate {
+    func userDetails(didSelect repository: String) {
+        let safariController = SFSafariViewController(url: URL(string: repository)!)
+        navigationController?.present(safariController, animated: true, completion: nil)
     }
 }

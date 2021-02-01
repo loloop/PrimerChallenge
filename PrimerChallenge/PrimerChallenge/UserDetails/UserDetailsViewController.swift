@@ -9,10 +9,14 @@ import Foundation
 import UIKit
 import ChallengeFoundation
 
+protocol UserDetailsViewControllerDelegate: AnyObject {
+    func userDetails(didSelect repository: String)
+}
+
 final class UserDetailsViewController: UIViewController {
 
-    let sections = [
-        UserRepositoriesSection()
+    lazy var sections = [
+        UserRepositoriesSection(delegate: self)
     ]
 
     private lazy var collectionView: UICollectionView = {
@@ -23,8 +27,11 @@ final class UserDetailsViewController: UIViewController {
 
     private lazy var dataSource = DiffableDataSource(sections: sections, on: collectionView)
 
-    init() {
+    private weak var delegate: UserDetailsViewControllerDelegate?
+
+    init(delegate: UserDetailsViewControllerDelegate) {
         super.init(nibName: nil, bundle: nil)
+        self.delegate = delegate
     }
 
     @available(*, unavailable)
@@ -47,5 +54,11 @@ final class UserDetailsViewController: UIViewController {
     func configureTitle() {
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Repositories"
+    }
+}
+
+extension UserDetailsViewController: UserRepositoriesSectionDelegate {
+    func userRepositoriesSection(didSelect item: String) {
+        delegate?.userDetails(didSelect: item)
     }
 }
