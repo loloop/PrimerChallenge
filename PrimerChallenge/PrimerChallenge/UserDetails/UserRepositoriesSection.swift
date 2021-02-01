@@ -39,7 +39,7 @@ final class UserRepositoriesSection: BaseDiffableSection {
 
     private weak var delegate: UserRepositoriesSectionDelegate?
     private let service: GitHubService
-    private var currentPage: Int = 0
+    private var currentPage: Int = 1
     private let currentUser: String
     private var state: State = .loading
 
@@ -54,11 +54,14 @@ final class UserRepositoriesSection: BaseDiffableSection {
     }
 
     func loadRepositories() {
-        service.repositories(for: currentUser, page: currentPage) { [weak self] result in
+        service.repositories(for: currentUser, page: currentPage) { [weak self] (result, lastPage) in
             switch result {
             case .success(let repositories):
                 self?.currentItems.append(contentsOf: repositories)
-                self?.state = .partiallyLoaded
+                if !lastPage {
+                    self?.currentPage += 1
+                }
+                self?.state = lastPage ? .fullyLoaded : .partiallyLoaded
             case .failure(let error):
                 self?.state = .error(error)
             }

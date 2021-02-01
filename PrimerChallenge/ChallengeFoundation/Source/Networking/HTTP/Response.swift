@@ -9,7 +9,7 @@ import Foundation
 
 public struct Response {
     public let request: Request
-    private let urlResponse: HTTPURLResponse
+    public let urlResponse: HTTPURLResponse
     public let data: Data?
 
     public init(request: Request, urlResponse: HTTPURLResponse, data: Data?) {
