@@ -13,7 +13,37 @@
 		B495F73825C86330003A5AD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B495F73625C86330003A5AD5 /* LaunchScreen.storyboard */; };
 		B495F74525C86446003A5AD5 /* MainCoordinatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F74425C86446003A5AD5 /* MainCoordinatingController.swift */; };
 		B495F74925C8649B003A5AD5 /* UserSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F74825C8649B003A5AD5 /* UserSearchView.swift */; };
+		B495F75925C871ED003A5AD5 /* ChallengeFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = B495F75725C871ED003A5AD5 /* ChallengeFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B495F75C25C871ED003A5AD5 /* ChallengeFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B495F75525C871ED003A5AD5 /* ChallengeFoundation.framework */; };
+		B495F75D25C871ED003A5AD5 /* ChallengeFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B495F75525C871ED003A5AD5 /* ChallengeFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B495F76625C87267003A5AD5 /* DiffableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F76525C87267003A5AD5 /* DiffableSection.swift */; };
+		B495F76925C8728C003A5AD5 /* DiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F76825C8728C003A5AD5 /* DiffableDataSource.swift */; };
+		B495F76C25C872BD003A5AD5 /* BaseDiffableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F76B25C872BD003A5AD5 /* BaseDiffableSection.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B495F75A25C871ED003A5AD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B495F72025C8632F003A5AD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B495F75425C871ED003A5AD5;
+			remoteInfo = ChallengeFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B495F76125C871ED003A5AD5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B495F75D25C871ED003A5AD5 /* ChallengeFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B495F72825C8632F003A5AD5 /* PrimerChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimerChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +54,24 @@
 		B495F73925C86330003A5AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B495F74425C86446003A5AD5 /* MainCoordinatingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatingController.swift; sourceTree = "<group>"; };
 		B495F74825C8649B003A5AD5 /* UserSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchView.swift; sourceTree = "<group>"; };
+		B495F75525C871ED003A5AD5 /* ChallengeFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChallengeFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B495F75725C871ED003A5AD5 /* ChallengeFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChallengeFoundation.h; sourceTree = "<group>"; };
+		B495F75825C871ED003A5AD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B495F76525C87267003A5AD5 /* DiffableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableSection.swift; sourceTree = "<group>"; };
+		B495F76825C8728C003A5AD5 /* DiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSource.swift; sourceTree = "<group>"; };
+		B495F76B25C872BD003A5AD5 /* BaseDiffableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDiffableSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B495F72525C8632F003A5AD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B495F75C25C871ED003A5AD5 /* ChallengeFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B495F75225C871ED003A5AD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				B495F72A25C8632F003A5AD5 /* PrimerChallenge */,
+				B495F75625C871ED003A5AD5 /* ChallengeFoundation */,
 				B495F72925C8632F003A5AD5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				B495F72825C8632F003A5AD5 /* PrimerChallenge.app */,
+				B495F75525C871ED003A5AD5 /* ChallengeFoundation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				B495F74325C863F8003A5AD5 /* UserSearch */,
-				B495F74225C863F1003A5AD5 /* RepositoryList */,
 				B495F74125C863DB003A5AD5 /* Main */,
 				B495F72B25C8632F003A5AD5 /* AppDelegate.swift */,
 				B495F72D25C8632F003A5AD5 /* SceneDelegate.swift */,
@@ -76,13 +121,6 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		B495F74225C863F1003A5AD5 /* RepositoryList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RepositoryList;
-			sourceTree = "<group>";
-		};
 		B495F74325C863F8003A5AD5 /* UserSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +129,46 @@
 			path = UserSearch;
 			sourceTree = "<group>";
 		};
+		B495F75625C871ED003A5AD5 /* ChallengeFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				B495F76325C871FB003A5AD5 /* Source */,
+				B495F75725C871ED003A5AD5 /* ChallengeFoundation.h */,
+				B495F75825C871ED003A5AD5 /* Info.plist */,
+			);
+			path = ChallengeFoundation;
+			sourceTree = "<group>";
+		};
+		B495F76325C871FB003A5AD5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B495F76425C87200003A5AD5 /* DiffableSection */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B495F76425C87200003A5AD5 /* DiffableSection */ = {
+			isa = PBXGroup;
+			children = (
+				B495F76525C87267003A5AD5 /* DiffableSection.swift */,
+				B495F76825C8728C003A5AD5 /* DiffableDataSource.swift */,
+				B495F76B25C872BD003A5AD5 /* BaseDiffableSection.swift */,
+			);
+			path = DiffableSection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B495F75025C871ED003A5AD5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B495F75925C871ED003A5AD5 /* ChallengeFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		B495F72725C8632F003A5AD5 /* PrimerChallenge */ = {
@@ -101,15 +178,35 @@
 				B495F72425C8632F003A5AD5 /* Sources */,
 				B495F72525C8632F003A5AD5 /* Frameworks */,
 				B495F72625C8632F003A5AD5 /* Resources */,
+				B495F76125C871ED003A5AD5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B495F75B25C871ED003A5AD5 /* PBXTargetDependency */,
 			);
 			name = PrimerChallenge;
 			productName = PrimerChallenge;
 			productReference = B495F72825C8632F003A5AD5 /* PrimerChallenge.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B495F75425C871ED003A5AD5 /* ChallengeFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B495F75E25C871ED003A5AD5 /* Build configuration list for PBXNativeTarget "ChallengeFoundation" */;
+			buildPhases = (
+				B495F75025C871ED003A5AD5 /* Headers */,
+				B495F75125C871ED003A5AD5 /* Sources */,
+				B495F75225C871ED003A5AD5 /* Frameworks */,
+				B495F75325C871ED003A5AD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChallengeFoundation;
+			productName = ChallengeFoundation;
+			productReference = B495F75525C871ED003A5AD5 /* ChallengeFoundation.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -122,6 +219,10 @@
 				TargetAttributes = {
 					B495F72725C8632F003A5AD5 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					B495F75425C871ED003A5AD5 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -139,6 +240,7 @@
 			projectRoot = "";
 			targets = (
 				B495F72725C8632F003A5AD5 /* PrimerChallenge */,
+				B495F75425C871ED003A5AD5 /* ChallengeFoundation */,
 			);
 		};
 /* End PBXProject section */
@@ -150,6 +252,13 @@
 			files = (
 				B495F73825C86330003A5AD5 /* LaunchScreen.storyboard in Resources */,
 				B495F73525C86330003A5AD5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B495F75325C871ED003A5AD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +276,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B495F75125C871ED003A5AD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B495F76625C87267003A5AD5 /* DiffableSection.swift in Sources */,
+				B495F76C25C872BD003A5AD5 /* BaseDiffableSection.swift in Sources */,
+				B495F76925C8728C003A5AD5 /* DiffableDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B495F75B25C871ED003A5AD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B495F75425C871ED003A5AD5 /* ChallengeFoundation */;
+			targetProxy = B495F75A25C871ED003A5AD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B495F73625C86330003A5AD5 /* LaunchScreen.storyboard */ = {
@@ -300,6 +427,7 @@
 		B495F73D25C86330003A5AD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +447,7 @@
 		B495F73E25C86330003A5AD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -332,6 +461,63 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B495F75F25C871ED003A5AD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7N9Z7384YN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ChallengeFoundation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.mauriciocardozo.ChallengeFoundation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B495F76025C871ED003A5AD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7N9Z7384YN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ChallengeFoundation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.mauriciocardozo.ChallengeFoundation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -352,6 +538,15 @@
 			buildConfigurations = (
 				B495F73D25C86330003A5AD5 /* Debug */,
 				B495F73E25C86330003A5AD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B495F75E25C871ED003A5AD5 /* Build configuration list for PBXNativeTarget "ChallengeFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B495F75F25C871ED003A5AD5 /* Debug */,
+				B495F76025C871ED003A5AD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
