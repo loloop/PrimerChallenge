@@ -47,6 +47,7 @@
 		B495F7D125C89827003A5AD5 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7D025C89827003A5AD5 /* GitHubService.swift */; };
 		B495F7D525C89A07003A5AD5 /* LoadingHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7D425C89A07003A5AD5 /* LoadingHashable.swift */; };
 		B495F7D925C89E36003A5AD5 /* RepositoryErrorHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7D825C89E36003A5AD5 /* RepositoryErrorHashable.swift */; };
+		B495F7DC25C8A5D6003A5AD5 /* GitHubError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7DB25C8A5D6003A5AD5 /* GitHubError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		B495F7D025C89827003A5AD5 /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
 		B495F7D425C89A07003A5AD5 /* LoadingHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHashable.swift; sourceTree = "<group>"; };
 		B495F7D825C89E36003A5AD5 /* RepositoryErrorHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryErrorHashable.swift; sourceTree = "<group>"; };
+		B495F7DB25C8A5D6003A5AD5 /* GitHubError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 				B495F7CC25C897CC003A5AD5 /* GitHubRepositoryOwner.swift */,
 				B495F7D425C89A07003A5AD5 /* LoadingHashable.swift */,
 				B495F7D825C89E36003A5AD5 /* RepositoryErrorHashable.swift */,
+				B495F7DB25C8A5D6003A5AD5 /* GitHubError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				B495F7CD25C897CC003A5AD5 /* GitHubRepositoryOwner.swift in Sources */,
 				B495F7BC25C88DF0003A5AD5 /* GitHubLoaderFactory.swift in Sources */,
 				B495F72C25C8632F003A5AD5 /* AppDelegate.swift in Sources */,
+				B495F7DC25C8A5D6003A5AD5 /* GitHubError.swift in Sources */,
 				B495F74525C86446003A5AD5 /* MainCoordinatingController.swift in Sources */,
 				B495F7D525C89A07003A5AD5 /* LoadingHashable.swift in Sources */,
 				B495F7B925C88DCA003A5AD5 /* GitHubRepository.swift in Sources */,

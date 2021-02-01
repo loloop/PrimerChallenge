@@ -33,13 +33,18 @@ final class GitHubService {
                     completion(.failure(NetworkError("Data not found")))
                     return
                 }
+                let decoder = request.decodeStrategy.decoder
                 do {
-                    let repositories = try request.decodeStrategy.decoder.decode([GitHubRepository].self, from: data)
+                    let repositories = try decoder.decode([GitHubRepository].self, from: data)
                     completion(.success(repositories))
                 } catch {
-                    completion(.failure(NetworkError("Response failed to decode")))
+                    let gitHubPrettyError = try? decoder.decode(GitHubError.self, from: data)
+                    if let error = gitHubPrettyError {
+                        completion(.failure(NetworkError(error.message)))
+                    } else {
+                        completion(.failure(NetworkError("Response failed to decode")))
+                    }
                 }
-
             case .failure(let error):
                 completion(.failure(error))
             }
