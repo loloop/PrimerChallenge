@@ -10,6 +10,7 @@ import SwiftUI
 
 protocol UserSearchViewDelegate: AnyObject {
     func userSearchView(didSearchFor name: String)
+    func openDebugSettings()
 }
 
 final class UserSearchViewModel {
@@ -30,6 +31,9 @@ struct UserSearchView: View {
         List {
             searchField
             suggestedUsernames
+            #if DEBUG
+            debugSettingsButton
+            #endif
         }
         .listStyle(InsetGroupedListStyle())
     }
@@ -63,15 +67,38 @@ struct UserSearchView: View {
         }
     }
 
+    var debugSettingsButton: some View {
+        Section {
+            Button(action: {
+                self.presentDebugSettings()
+            }, label: {
+                HStack {
+                    Text("Open Debug Settings")
+                        .foregroundColor(.primary)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                }
+            })
+        }
+    }
+
     func search(for name: String) {
         guard name.trimmingCharacters(in: .whitespacesAndNewlines) != "" else { return }
         delegate?.userSearchView(didSearchFor: name)
+    }
+
+    func presentDebugSettings() {
+        #if DEBUG
+        delegate?.openDebugSettings()
+        #endif
     }
 }
 
 struct UserSearchView_Previews: PreviewProvider {
 
     class Delegate: UserSearchViewDelegate {
+        func openDebugSettings() {}
+
         func userSearchView(didSearchFor name: String) {}
     }
 

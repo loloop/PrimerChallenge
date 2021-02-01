@@ -42,6 +42,13 @@ extension MainCoordinatingController: UserSearchViewDelegate {
         let controller = UserDetailsViewController(delegate: self)
         navigationController?.show(controller, sender: nil)
     }
+
+    func openDebugSettings() {
+        #if DEBUG
+        let debugSettingsView = UIHostingController(rootView: DebugSettingsView(viewModel: .init()))
+        navigationController?.present(debugSettingsView, animated: true, completion: nil)
+        #endif
+    }
 }
 
 extension MainCoordinatingController: UserDetailsViewControllerDelegate {

@@ -38,6 +38,12 @@
 		B495F7AE25C88A70003A5AD5 /* URLLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7AD25C88A70003A5AD5 /* URLLoader.swift */; };
 		B495F7B225C88A95003A5AD5 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7B125C88A95003A5AD5 /* URLSession.swift */; };
 		B495F7B625C88AD8003A5AD5 /* RequestModifyingLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7B525C88AD8003A5AD5 /* RequestModifyingLoader.swift */; };
+		B495F7B925C88DCA003A5AD5 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7B825C88DCA003A5AD5 /* GitHubRepository.swift */; };
+		B495F7BC25C88DF0003A5AD5 /* GitHubLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7BB25C88DF0003A5AD5 /* GitHubLoaderFactory.swift */; };
+		B495F7C125C892AB003A5AD5 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7C025C892AB003A5AD5 /* UserDefaultsWrapper.swift */; };
+		B495F7C725C892E6003A5AD5 /* DebugSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7C625C892E6003A5AD5 /* DebugSettings.swift */; };
+		B495F7CA25C89323003A5AD5 /* DebugSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7C925C89323003A5AD5 /* DebugSettingsView.swift */; };
+		B495F7CD25C897CC003A5AD5 /* GitHubRepositoryOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7CC25C897CC003A5AD5 /* GitHubRepositoryOwner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +104,12 @@
 		B495F7AD25C88A70003A5AD5 /* URLLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLLoader.swift; sourceTree = "<group>"; };
 		B495F7B125C88A95003A5AD5 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		B495F7B525C88AD8003A5AD5 /* RequestModifyingLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModifyingLoader.swift; sourceTree = "<group>"; };
+		B495F7B825C88DCA003A5AD5 /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		B495F7BB25C88DF0003A5AD5 /* GitHubLoaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubLoaderFactory.swift; sourceTree = "<group>"; };
+		B495F7C025C892AB003A5AD5 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		B495F7C625C892E6003A5AD5 /* DebugSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettings.swift; sourceTree = "<group>"; };
+		B495F7C925C89323003A5AD5 /* DebugSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingsView.swift; sourceTree = "<group>"; };
+		B495F7CC25C897CC003A5AD5 /* GitHubRepositoryOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryOwner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +152,7 @@
 		B495F72A25C8632F003A5AD5 /* PrimerChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				B495F7C425C892B9003A5AD5 /* Debug */,
 				B495F77025C8754C003A5AD5 /* UserDetails */,
 				B495F74325C863F8003A5AD5 /* UserSearch */,
 				B495F74125C863DB003A5AD5 /* Main */,
@@ -181,6 +194,7 @@
 		B495F76325C871FB003A5AD5 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B495F7BF25C892A1003A5AD5 /* PropertyWrappers */,
 				B495F78E25C883AE003A5AD5 /* Networking */,
 				B495F77C25C876AC003A5AD5 /* Extensions */,
 				B495F76425C87200003A5AD5 /* DiffableSection */,
@@ -206,6 +220,7 @@
 				B495F77825C87593003A5AD5 /* Model */,
 				B495F77125C87567003A5AD5 /* UserDetailsViewController.swift */,
 				B495F77525C87581003A5AD5 /* UserRepositoriesSection.swift */,
+				B495F7BB25C88DF0003A5AD5 /* GitHubLoaderFactory.swift */,
 			);
 			path = UserDetails;
 			sourceTree = "<group>";
@@ -213,6 +228,8 @@
 		B495F77825C87593003A5AD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B495F7B825C88DCA003A5AD5 /* GitHubRepository.swift */,
+				B495F7CC25C897CC003A5AD5 /* GitHubRepositoryOwner.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +293,23 @@
 				B495F7B125C88A95003A5AD5 /* URLSession.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		B495F7BF25C892A1003A5AD5 /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				B495F7C025C892AB003A5AD5 /* UserDefaultsWrapper.swift */,
+			);
+			path = PropertyWrappers;
+			sourceTree = "<group>";
+		};
+		B495F7C425C892B9003A5AD5 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				B495F7C625C892E6003A5AD5 /* DebugSettings.swift */,
+				B495F7C925C89323003A5AD5 /* DebugSettingsView.swift */,
+			);
+			path = Debug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,10 +424,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B495F7C725C892E6003A5AD5 /* DebugSettings.swift in Sources */,
 				B495F77225C87567003A5AD5 /* UserDetailsViewController.swift in Sources */,
 				B495F78825C878D8003A5AD5 /* RepositoryCell.swift in Sources */,
+				B495F7CA25C89323003A5AD5 /* DebugSettingsView.swift in Sources */,
+				B495F7CD25C897CC003A5AD5 /* GitHubRepositoryOwner.swift in Sources */,
+				B495F7BC25C88DF0003A5AD5 /* GitHubLoaderFactory.swift in Sources */,
 				B495F72C25C8632F003A5AD5 /* AppDelegate.swift in Sources */,
 				B495F74525C86446003A5AD5 /* MainCoordinatingController.swift in Sources */,
+				B495F7B925C88DCA003A5AD5 /* GitHubRepository.swift in Sources */,
 				B495F77625C87581003A5AD5 /* UserRepositoriesSection.swift in Sources */,
 				B495F74925C8649B003A5AD5 /* UserSearchView.swift in Sources */,
 				B495F72E25C8632F003A5AD5 /* SceneDelegate.swift in Sources */,
@@ -420,6 +459,7 @@
 				B495F7AB25C88A27003A5AD5 /* BaseLoader.swift in Sources */,
 				B495F7B225C88A95003A5AD5 /* URLSession.swift in Sources */,
 				B495F7A525C889ED003A5AD5 /* Loader.swift in Sources */,
+				B495F7C125C892AB003A5AD5 /* UserDefaultsWrapper.swift in Sources */,
 				B495F7AE25C88A70003A5AD5 /* URLLoader.swift in Sources */,
 				B495F7B625C88AD8003A5AD5 /* RequestModifyingLoader.swift in Sources */,
 				B495F77E25C876E1003A5AD5 /* UIView+Constraints.swift in Sources */,
