@@ -12,4 +12,17 @@ struct GitHubRepository: Codable, Identifiable {
     let name: String
     let description: String?
     let owner: GitHubRepositoryOwner
+    let htmlUrl: URL
 }
+
+extension GitHubRepository: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func ==(lhs: GitHubRepository, rhs: GitHubRepository) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
+

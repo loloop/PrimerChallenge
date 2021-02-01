@@ -34,9 +34,11 @@ enum GitHubLoaderFactory {
         return "api.github.com"
     }
 
-    static func repositories(for user: String) -> Request {
+    static func repositories(for user: String, page: Int) -> Request {
         /// Using `users/` instead of `orgs/` lets us search for repositories in both users and organizations
-        Request(path: "users/\(user)/repos")
+        Request(path: "users/\(user)/repos",
+                query: [URLQueryItem(name: "page", value: "\(page)")],
+                strategy: DecodeStrategy(keyDecodingStrategy: .convertFromSnakeCase))
     }
 
 }

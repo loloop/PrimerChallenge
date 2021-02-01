@@ -44,6 +44,9 @@
 		B495F7C725C892E6003A5AD5 /* DebugSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7C625C892E6003A5AD5 /* DebugSettings.swift */; };
 		B495F7CA25C89323003A5AD5 /* DebugSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7C925C89323003A5AD5 /* DebugSettingsView.swift */; };
 		B495F7CD25C897CC003A5AD5 /* GitHubRepositoryOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7CC25C897CC003A5AD5 /* GitHubRepositoryOwner.swift */; };
+		B495F7D125C89827003A5AD5 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7D025C89827003A5AD5 /* GitHubService.swift */; };
+		B495F7D525C89A07003A5AD5 /* LoadingHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7D425C89A07003A5AD5 /* LoadingHashable.swift */; };
+		B495F7D925C89E36003A5AD5 /* RepositoryErrorHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7D825C89E36003A5AD5 /* RepositoryErrorHashable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,9 @@
 		B495F7C625C892E6003A5AD5 /* DebugSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettings.swift; sourceTree = "<group>"; };
 		B495F7C925C89323003A5AD5 /* DebugSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugSettingsView.swift; sourceTree = "<group>"; };
 		B495F7CC25C897CC003A5AD5 /* GitHubRepositoryOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryOwner.swift; sourceTree = "<group>"; };
+		B495F7D025C89827003A5AD5 /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
+		B495F7D425C89A07003A5AD5 /* LoadingHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHashable.swift; sourceTree = "<group>"; };
+		B495F7D825C89E36003A5AD5 /* RepositoryErrorHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryErrorHashable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,11 +222,11 @@
 		B495F77025C8754C003A5AD5 /* UserDetails */ = {
 			isa = PBXGroup;
 			children = (
+				B495F7CF25C89819003A5AD5 /* Service */,
 				B495F77925C87598003A5AD5 /* Views */,
 				B495F77825C87593003A5AD5 /* Model */,
 				B495F77125C87567003A5AD5 /* UserDetailsViewController.swift */,
 				B495F77525C87581003A5AD5 /* UserRepositoriesSection.swift */,
-				B495F7BB25C88DF0003A5AD5 /* GitHubLoaderFactory.swift */,
 			);
 			path = UserDetails;
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 			children = (
 				B495F7B825C88DCA003A5AD5 /* GitHubRepository.swift */,
 				B495F7CC25C897CC003A5AD5 /* GitHubRepositoryOwner.swift */,
+				B495F7D425C89A07003A5AD5 /* LoadingHashable.swift */,
+				B495F7D825C89E36003A5AD5 /* RepositoryErrorHashable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +318,15 @@
 				B495F7C925C89323003A5AD5 /* DebugSettingsView.swift */,
 			);
 			path = Debug;
+			sourceTree = "<group>";
+		};
+		B495F7CF25C89819003A5AD5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B495F7BB25C88DF0003A5AD5 /* GitHubLoaderFactory.swift */,
+				B495F7D025C89827003A5AD5 /* GitHubService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,13 +442,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B495F7C725C892E6003A5AD5 /* DebugSettings.swift in Sources */,
+				B495F7D125C89827003A5AD5 /* GitHubService.swift in Sources */,
 				B495F77225C87567003A5AD5 /* UserDetailsViewController.swift in Sources */,
 				B495F78825C878D8003A5AD5 /* RepositoryCell.swift in Sources */,
+				B495F7D925C89E36003A5AD5 /* RepositoryErrorHashable.swift in Sources */,
 				B495F7CA25C89323003A5AD5 /* DebugSettingsView.swift in Sources */,
 				B495F7CD25C897CC003A5AD5 /* GitHubRepositoryOwner.swift in Sources */,
 				B495F7BC25C88DF0003A5AD5 /* GitHubLoaderFactory.swift in Sources */,
 				B495F72C25C8632F003A5AD5 /* AppDelegate.swift in Sources */,
 				B495F74525C86446003A5AD5 /* MainCoordinatingController.swift in Sources */,
+				B495F7D525C89A07003A5AD5 /* LoadingHashable.swift in Sources */,
 				B495F7B925C88DCA003A5AD5 /* GitHubRepository.swift in Sources */,
 				B495F77625C87581003A5AD5 /* UserRepositoriesSection.swift in Sources */,
 				B495F74925C8649B003A5AD5 /* UserSearchView.swift in Sources */,

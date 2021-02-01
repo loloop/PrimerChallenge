@@ -39,7 +39,7 @@ final class MainCoordinatingController: UIViewController {
 
 extension MainCoordinatingController: UserSearchViewDelegate {
     func userSearchView(didSearchFor name: String) {
-        let controller = UserDetailsViewController(delegate: self)
+        let controller = UserDetailsViewController(username: name, delegate: self)
         navigationController?.show(controller, sender: nil)
     }
 
@@ -52,8 +52,8 @@ extension MainCoordinatingController: UserSearchViewDelegate {
 }
 
 extension MainCoordinatingController: UserDetailsViewControllerDelegate {
-    func userDetails(didSelect repository: String) {
-        let safariController = SFSafariViewController(url: URL(string: repository)!)
+    func userDetails(didSelect repository: URL) {
+        let safariController = SFSafariViewController(url: repository)
         navigationController?.present(safariController, animated: true, completion: nil)
     }
 }

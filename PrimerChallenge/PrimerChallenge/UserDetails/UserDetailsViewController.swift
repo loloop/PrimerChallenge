@@ -10,13 +10,13 @@ import UIKit
 import ChallengeFoundation
 
 protocol UserDetailsViewControllerDelegate: AnyObject {
-    func userDetails(didSelect repository: String)
+    func userDetails(didSelect repository: URL)
 }
 
 final class UserDetailsViewController: UIViewController {
 
     lazy var sections = [
-        UserRepositoriesSection(delegate: self)
+        UserRepositoriesSection(user: username, delegate: self)
     ]
 
     private lazy var collectionView: UICollectionView = {
@@ -28,10 +28,12 @@ final class UserDetailsViewController: UIViewController {
     private lazy var dataSource = DiffableDataSource(sections: sections, on: collectionView)
 
     private weak var delegate: UserDetailsViewControllerDelegate?
+    private let username: String
 
-    init(delegate: UserDetailsViewControllerDelegate) {
-        super.init(nibName: nil, bundle: nil)
+    init(username: String, delegate: UserDetailsViewControllerDelegate) {
+        self.username = username
         self.delegate = delegate
+        super.init(nibName: nil, bundle: nil)
     }
 
     @available(*, unavailable)
@@ -58,7 +60,11 @@ final class UserDetailsViewController: UIViewController {
 }
 
 extension UserDetailsViewController: UserRepositoriesSectionDelegate {
-    func userRepositoriesSection(didSelect item: String) {
+    func userRepositoriesSection(didSelect item: URL) {
         delegate?.userDetails(didSelect: item)
+    }
+
+    func updateSnapshot() {
+        dataSource.updateSnapshot()
     }
 }

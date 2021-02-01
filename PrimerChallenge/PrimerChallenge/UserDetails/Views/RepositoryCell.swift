@@ -12,6 +12,7 @@ import ChallengeFoundation
 final class RepositoryCell: UICollectionViewCell {
     private lazy var label: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         return label
     }()
 
