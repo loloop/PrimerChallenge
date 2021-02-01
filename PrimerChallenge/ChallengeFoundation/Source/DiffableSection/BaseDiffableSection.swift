@@ -11,24 +11,24 @@ import UIKit
 open class BaseDiffableSection: NSObject, DiffableSection {
 
     let id = UUID()
-    var sectionIdentifier: AnyHashable { id }
+    public var sectionIdentifier: AnyHashable { id }
 
     // MARK: - Required Methods
 
-    func dequeueReusableCell(_ collectionView: UICollectionView, for indexPath: IndexPath, item: AnyHashable) -> UICollectionViewCell? {
+    open func dequeueReusableCell(_ collectionView: UICollectionView, for indexPath: IndexPath, item: AnyHashable) -> UICollectionViewCell? {
         fatalError("Base class methods should be overridden")
     }
 
-    var items: [AnyHashable] {
+    open var items: [AnyHashable] {
         fatalError("Base class properties should be overridden")
     }
 
-    func layout(for environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? {
+    open func layout(for environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? {
         fatalError("Base class methods should be overridden")
     }
 
     // MARK: - Optional methods
 
-    func dequeueReusableSupplementary(_ collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView? { nil }
+    open func dequeueReusableSupplementary(_ collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView? { nil }
 
 }

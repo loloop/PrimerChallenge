@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class DiffableDataSource: NSObject {
+final public class DiffableDataSource: NSObject {
 
     var currentSnapshot: NSDiffableDataSourceSnapshot<AnyHashable, AnyHashable> = .init()
     var dataSource: UICollectionViewDiffableDataSource<AnyHashable, AnyHashable>?
@@ -55,7 +55,7 @@ final class DiffableDataSource: NSObject {
 }
 
 extension DiffableDataSource: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let section = sections[indexPath.section] as? UICollectionViewDelegate else { return }
         section.collectionView?(collectionView, willDisplay: cell, forItemAt: indexPath)
     }

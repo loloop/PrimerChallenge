@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol DiffableSection: AnyObject {
+public protocol DiffableSection: AnyObject {
     var sectionIdentifier: AnyHashable { get }
     func dequeueReusableCell(_ collectionView: UICollectionView, for indexPath: IndexPath, item: AnyHashable) -> UICollectionViewCell?
     func dequeueReusableSupplementary(_ collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView?
