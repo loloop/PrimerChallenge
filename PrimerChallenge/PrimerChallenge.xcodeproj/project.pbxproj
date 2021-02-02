@@ -57,6 +57,7 @@
 		B495F7F725C8E2D8003A5AD5 /* UIImageView+RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7F625C8E2D8003A5AD5 /* UIImageView+RemoteImage.swift */; };
 		B495F7FB25C8E426003A5AD5 /* KingImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7FA25C8E426003A5AD5 /* KingImageLoader.swift */; };
 		B495F80025C8EED6003A5AD5 /* UIApplication+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7FF25C8EED6003A5AD5 /* UIApplication+Window.swift */; };
+		B495F80325C8F013003A5AD5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F80225C8F013003A5AD5 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		B495F7F625C8E2D8003A5AD5 /* UIImageView+RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+RemoteImage.swift"; sourceTree = "<group>"; };
 		B495F7FA25C8E426003A5AD5 /* KingImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingImageLoader.swift; sourceTree = "<group>"; };
 		B495F7FF25C8EED6003A5AD5 /* UIApplication+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Window.swift"; sourceTree = "<group>"; };
+		B495F80225C8F013003A5AD5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 				B495F78725C878D8003A5AD5 /* RepositoryCell.swift */,
 				B495F7EC25C8D9B4003A5AD5 /* LoadingCell.swift */,
 				B495F7EF25C8DBFE003A5AD5 /* ErrorCell.swift */,
+				B495F80225C8F013003A5AD5 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				B495F7D525C89A07003A5AD5 /* LoadingHashable.swift in Sources */,
 				B495F7FB25C8E426003A5AD5 /* KingImageLoader.swift in Sources */,
 				B495F7B925C88DCA003A5AD5 /* GitHubRepository.swift in Sources */,
+				B495F80325C8F013003A5AD5 /* HeaderView.swift in Sources */,
 				B495F7F025C8DBFE003A5AD5 /* ErrorCell.swift in Sources */,
 				B495F77625C87581003A5AD5 /* UserRepositoriesSection.swift in Sources */,
 				B495F74925C8649B003A5AD5 /* UserSearchView.swift in Sources */,

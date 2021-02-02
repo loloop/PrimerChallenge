@@ -51,6 +51,10 @@ final class UserRepositoriesSection: BaseDiffableSection {
         cell.setupCell(with: model.error.message)
     }
 
+    private lazy var headerRegistration = UICollectionView.SupplementaryRegistration<HeaderView>(elementKind: UICollectionView.elementKindSectionHeader) { (headerView, elementKind, indexPath) in
+        headerView.setupHeader(with: "A repository is like a folder for your project. Your project's repository contains all of your project's files and stores each file's revision history. You can also discuss and manage your project's work within the repository.")
+    }
+
     private weak var delegate: UserRepositoriesSectionDelegate?
     private let service: GitHubService
     private var currentPage: Int = 1
@@ -102,18 +106,31 @@ final class UserRepositoriesSection: BaseDiffableSection {
     }
 
     override func dequeueReusableSupplementary(_ collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionReusableView? {
-        nil
+        collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
     }
 
     override func layout(for environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? {
         let isRegularSizeClass = environment.traitCollection.horizontalSizeClass == .regular
+
         let size = NSCollectionLayoutSize(widthDimension: isRegularSizeClass ? .fractionalWidth(0.5) : .fractionalWidth(1),
                                           heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: size)
+
+
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                heightDimension: isRegularSizeClass ? .estimated(216) : .estimated(120))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        return NSCollectionLayoutSection(group: group)
+
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                heightDimension: .estimated(150))
+
+        let section = NSCollectionLayoutSection(group: group)
+
+        section.boundarySupplementaryItems = [
+            .init(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top),
+        ]
+
+        return section
     }
 
     var currentItems: [GitHubRepository] = []
