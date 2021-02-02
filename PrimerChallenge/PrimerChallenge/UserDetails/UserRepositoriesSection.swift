@@ -42,9 +42,8 @@ final class UserRepositoriesSection: BaseDiffableSection {
         cell.setupCell(titleText: model.name, subtitleText: model.owner.login, imageURL: model.owner.avatarUrl)
     }
 
-    private lazy var loadingCellRegistration = UICollectionView.CellRegistration<RepositoryCell, LoadingHashable> {
-        (cell, indexPath, model) in
-        cell.setupCell(titleText: "loadingCell", subtitleText: "loadingCell", imageURL: URL(string:"https://google.com")! )
+    private lazy var loadingCellRegistration = UICollectionView.CellRegistration<LoadingCell, LoadingHashable> { (cell, _, _) in
+        cell.activityIndicator.startAnimating()
     }
 
     private lazy var errorCellRegistration = UICollectionView.CellRegistration<RepositoryCell, RepositoryErrorHashable> {
