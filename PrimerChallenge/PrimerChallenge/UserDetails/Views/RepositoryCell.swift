@@ -47,8 +47,16 @@ final class RepositoryCell: UICollectionViewCell {
         return label
     }()
 
+    private lazy var tapIndicator: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.preferredFont(forTextStyle: .caption1)
+        label.textColor = .link
+        label.text = "Tap to open"
+        return label
+    }()
+
     private lazy var stack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [title, subtitle])
+        let stack = UIStackView(arrangedSubviews: [title, subtitle, tapIndicator])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.spacing = Metrics.padding
         stack.axis = .vertical
@@ -59,8 +67,7 @@ final class RepositoryCell: UICollectionViewCell {
     private lazy var stackConstraints: [NSLayoutConstraint] = [
         stack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Metrics.padding),
         stack.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: Metrics.padding),
-        stack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Metrics.padding),
-        stack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Metrics.padding),
+        stack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Metrics.padding)
     ]
 
     override init(frame: CGRect) {
