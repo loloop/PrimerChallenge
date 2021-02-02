@@ -16,11 +16,26 @@ protocol UserRepositoriesSectionDelegate: AnyObject {
 
 final class UserRepositoriesSection: BaseDiffableSection {
 
-    enum State {
+    enum State: Equatable {
         case loading
         case error(NetworkError)
         case partiallyLoaded
         case fullyLoaded
+
+        static func == (lhs: UserRepositoriesSection.State, rhs: UserRepositoriesSection.State) -> Bool {
+            switch (lhs, rhs) {
+            case (.error(_), .error(_)):
+                return true
+            case (.loading, .loading):
+                return true
+            case (.partiallyLoaded, .partiallyLoaded):
+                return true
+            case (.fullyLoaded, .fullyLoaded):
+                return true
+            default:
+                return false
+            }
+        }
     }
 
     private lazy var repositoryCellRegistration = UICollectionView.CellRegistration<RepositoryCell, GitHubRepository> { (cell, indexPath, model) in
@@ -123,6 +138,14 @@ final class UserRepositoriesSection: BaseDiffableSection {
 }
 
 extension UserRepositoriesSection: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard state == .partiallyLoaded,
+              indexPath.item == currentItems.count - 10 else { return }
+
+        loadRepositories()
+    }
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard
             let item = currentItems.element(at: indexPath.item),
