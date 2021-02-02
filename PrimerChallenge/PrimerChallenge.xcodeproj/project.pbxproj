@@ -52,6 +52,7 @@
 		B495F7E725C8D0B7003A5AD5 /* ChallengeBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7E625C8D0B7003A5AD5 /* ChallengeBundle.swift */; };
 		B495F7EA25C8D0F7003A5AD5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7E925C8D0F7003A5AD5 /* UIColor+Extension.swift */; };
 		B495F7ED25C8D9B4003A5AD5 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7EC25C8D9B4003A5AD5 /* LoadingCell.swift */; };
+		B495F7F025C8DBFE003A5AD5 /* ErrorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7EF25C8DBFE003A5AD5 /* ErrorCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		B495F7E625C8D0B7003A5AD5 /* ChallengeBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBundle.swift; sourceTree = "<group>"; };
 		B495F7E925C8D0F7003A5AD5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B495F7EC25C8D9B4003A5AD5 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		B495F7EF25C8DBFE003A5AD5 /* ErrorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 			children = (
 				B495F78725C878D8003A5AD5 /* RepositoryCell.swift */,
 				B495F7EC25C8D9B4003A5AD5 /* LoadingCell.swift */,
+				B495F7EF25C8DBFE003A5AD5 /* ErrorCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				B495F7ED25C8D9B4003A5AD5 /* LoadingCell.swift in Sources */,
 				B495F7D525C89A07003A5AD5 /* LoadingHashable.swift in Sources */,
 				B495F7B925C88DCA003A5AD5 /* GitHubRepository.swift in Sources */,
+				B495F7F025C8DBFE003A5AD5 /* ErrorCell.swift in Sources */,
 				B495F77625C87581003A5AD5 /* UserRepositoriesSection.swift in Sources */,
 				B495F74925C8649B003A5AD5 /* UserSearchView.swift in Sources */,
 				B495F72E25C8632F003A5AD5 /* SceneDelegate.swift in Sources */,

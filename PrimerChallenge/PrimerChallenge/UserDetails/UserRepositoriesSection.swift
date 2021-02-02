@@ -46,9 +46,9 @@ final class UserRepositoriesSection: BaseDiffableSection {
         cell.activityIndicator.startAnimating()
     }
 
-    private lazy var errorCellRegistration = UICollectionView.CellRegistration<RepositoryCell, RepositoryErrorHashable> {
+    private lazy var errorCellRegistration = UICollectionView.CellRegistration<ErrorCell, RepositoryErrorHashable> {
         (cell, indexPath, model) in
-        cell.setupCell(titleText: model.error.message, subtitleText: "", imageURL: URL(string: "https://google.com")!)
+        cell.setupCell(with: model.error.message)
     }
 
     private weak var delegate: UserRepositoriesSectionDelegate?
