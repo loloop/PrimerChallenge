@@ -111,7 +111,7 @@ final class UserRepositoriesSection: BaseDiffableSection {
                                           heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: size)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                               heightDimension: .estimated(200))
+                                               heightDimension: isRegularSizeClass ? .estimated(216) : .estimated(120))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         return NSCollectionLayoutSection(group: group)
     }

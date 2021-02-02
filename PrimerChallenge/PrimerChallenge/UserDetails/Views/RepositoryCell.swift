@@ -10,9 +10,11 @@ import UIKit
 import ChallengeFoundation
 
 private enum Metrics {
-    static let padding: CGFloat = 5
+    static let padding: CGFloat = 16
     static let cornerRadius: CGFloat = 15
-    static let imageSize: CGFloat = 184
+    static let regularImageSize: CGFloat = 184
+    static let compactImageSize: CGFloat = 104
+    static let stackSpacing: CGFloat = padding/2
 }
 
 final class RepositoryCell: UICollectionViewCell {
@@ -21,15 +23,23 @@ final class RepositoryCell: UICollectionViewCell {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.cornerRadius = Metrics.cornerRadius
+        image.contentMode = .scaleAspectFill
+        image.clipsToBounds = true
         return image
     }()
 
     private lazy var imageConstraints: [NSLayoutConstraint] = [
         imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Metrics.padding),
         imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Metrics.padding),
-        imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Metrics.padding),
-        imageView.widthAnchor.constraint(equalToConstant: Metrics.imageSize),
-        imageView.heightAnchor.constraint(equalToConstant: Metrics.imageSize),
+        imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1.0)
+    ]
+
+    private lazy var regularImageConstraints: [NSLayoutConstraint] = [
+        imageView.widthAnchor.constraint(lessThanOrEqualToConstant: Metrics.regularImageSize),
+    ]
+
+    private lazy var compactImageConstraints: [NSLayoutConstraint] = [
+        imageView.widthAnchor.constraint(lessThanOrEqualToConstant: Metrics.compactImageSize),
     ]
 
     private lazy var title: UILabel = {
@@ -42,6 +52,7 @@ final class RepositoryCell: UICollectionViewCell {
 
     private lazy var subtitle: UILabel = {
         let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 12)
         label.numberOfLines = 0
         label.textColor = .textMuted
         return label
@@ -58,7 +69,7 @@ final class RepositoryCell: UICollectionViewCell {
     private lazy var stack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [title, subtitle, tapIndicator])
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.spacing = Metrics.padding
+        stack.spacing = Metrics.stackSpacing
         stack.axis = .vertical
         stack.distribution = .fillProportionally
         return stack
@@ -93,6 +104,26 @@ final class RepositoryCell: UICollectionViewCell {
     private func setupConstraints() {
         NSLayoutConstraint.activate(imageConstraints)
         NSLayoutConstraint.activate(stackConstraints)
+        let currentTraits = UIApplication.shared.currentKeyWindow?.traitCollection
+        activateConstraints(for: currentTraits)
+    }
+
+    private func activateConstraints(for traitCollection: UITraitCollection?) {
+        guard let traitCollection = traitCollection else { return }
+
+        if traitCollection.horizontalSizeClass == .regular {
+            NSLayoutConstraint.deactivate(compactImageConstraints)
+            NSLayoutConstraint.activate(regularImageConstraints)
+        } else {
+            NSLayoutConstraint.deactivate(regularImageConstraints)
+            NSLayoutConstraint.activate(compactImageConstraints)
+        }
+
+        setNeedsLayout()
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        activateConstraints(for: traitCollection)
     }
 
     private func resetCell() {
@@ -105,5 +136,8 @@ final class RepositoryCell: UICollectionViewCell {
         resetCell()
         title.text = titleText
         subtitle.text = subtitleText
+        imageView.loadImage(from: imageURL)
     }
+
+
 }
