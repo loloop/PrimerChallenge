@@ -48,6 +48,9 @@
 		B495F7D525C89A07003A5AD5 /* LoadingHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7D425C89A07003A5AD5 /* LoadingHashable.swift */; };
 		B495F7D925C89E36003A5AD5 /* RepositoryErrorHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7D825C89E36003A5AD5 /* RepositoryErrorHashable.swift */; };
 		B495F7DC25C8A5D6003A5AD5 /* GitHubError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7DB25C8A5D6003A5AD5 /* GitHubError.swift */; };
+		B495F7E425C8D0AE003A5AD5 /* ChallengeFoundationAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B495F7E325C8D0AE003A5AD5 /* ChallengeFoundationAssets.xcassets */; };
+		B495F7E725C8D0B7003A5AD5 /* ChallengeBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7E625C8D0B7003A5AD5 /* ChallengeBundle.swift */; };
+		B495F7EA25C8D0F7003A5AD5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495F7E925C8D0F7003A5AD5 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +121,9 @@
 		B495F7D425C89A07003A5AD5 /* LoadingHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHashable.swift; sourceTree = "<group>"; };
 		B495F7D825C89E36003A5AD5 /* RepositoryErrorHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryErrorHashable.swift; sourceTree = "<group>"; };
 		B495F7DB25C8A5D6003A5AD5 /* GitHubError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubError.swift; sourceTree = "<group>"; };
+		B495F7E325C8D0AE003A5AD5 /* ChallengeFoundationAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChallengeFoundationAssets.xcassets; sourceTree = "<group>"; };
+		B495F7E625C8D0B7003A5AD5 /* ChallengeBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeBundle.swift; sourceTree = "<group>"; };
+		B495F7E925C8D0F7003A5AD5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +198,7 @@
 		B495F75625C871ED003A5AD5 /* ChallengeFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				B495F7E225C8D0A0003A5AD5 /* Resources */,
 				B495F76325C871FB003A5AD5 /* Source */,
 				B495F75725C871ED003A5AD5 /* ChallengeFoundation.h */,
 				B495F75825C871ED003A5AD5 /* Info.plist */,
@@ -259,6 +266,7 @@
 				B495F77D25C876E1003A5AD5 /* UIView+Constraints.swift */,
 				B495F78125C8772D003A5AD5 /* UIEdgeInsets+Init.swift */,
 				B495F78B25C87E23003A5AD5 /* Array+Element.swift */,
+				B495F7E925C8D0F7003A5AD5 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,6 +338,15 @@
 				B495F7D025C89827003A5AD5 /* GitHubService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B495F7E225C8D0A0003A5AD5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B495F7E325C8D0AE003A5AD5 /* ChallengeFoundationAssets.xcassets */,
+				B495F7E625C8D0B7003A5AD5 /* ChallengeBundle.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B495F7E425C8D0AE003A5AD5 /* ChallengeFoundationAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +488,7 @@
 				B495F79125C8846B003A5AD5 /* Method.swift in Sources */,
 				B495F76625C87267003A5AD5 /* DiffableSection.swift in Sources */,
 				B495F76C25C872BD003A5AD5 /* BaseDiffableSection.swift in Sources */,
+				B495F7EA25C8D0F7003A5AD5 /* UIColor+Extension.swift in Sources */,
 				B495F79E25C88965003A5AD5 /* Body.swift in Sources */,
 				B495F7A825C88A0C003A5AD5 /* Response.swift in Sources */,
 				B495F78C25C87E23003A5AD5 /* Array+Element.swift in Sources */,
@@ -486,6 +505,7 @@
 				B495F7C125C892AB003A5AD5 /* UserDefaultsWrapper.swift in Sources */,
 				B495F7AE25C88A70003A5AD5 /* URLLoader.swift in Sources */,
 				B495F7B625C88AD8003A5AD5 /* RequestModifyingLoader.swift in Sources */,
+				B495F7E725C8D0B7003A5AD5 /* ChallengeBundle.swift in Sources */,
 				B495F77E25C876E1003A5AD5 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

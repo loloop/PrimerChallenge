@@ -24,17 +24,17 @@ final class UserRepositoriesSection: BaseDiffableSection {
     }
 
     private lazy var repositoryCellRegistration = UICollectionView.CellRegistration<RepositoryCell, GitHubRepository> { (cell, indexPath, model) in
-        cell.setupCell(with: model.name)
+        cell.setupCell(titleText: model.name, subtitleText: model.owner.login, imageURL: model.owner.avatarUrl)
     }
 
     private lazy var loadingCellRegistration = UICollectionView.CellRegistration<RepositoryCell, LoadingHashable> {
         (cell, indexPath, model) in
-        cell.setupCell(with: "loading")
+        cell.setupCell(titleText: "loadingCell", subtitleText: "loadingCell", imageURL: URL(string:"https://google.com")! )
     }
 
     private lazy var errorCellRegistration = UICollectionView.CellRegistration<RepositoryCell, RepositoryErrorHashable> {
         (cell, indexPath, model) in
-        cell.setupCell(with: model.error.message)
+        cell.setupCell(titleText: model.error.message, subtitleText: "", imageURL: URL(string: "https://google.com")!)
     }
 
     private weak var delegate: UserRepositoriesSectionDelegate?
@@ -97,7 +97,7 @@ final class UserRepositoriesSection: BaseDiffableSection {
                                           heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: size)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                               heightDimension: .estimated(50))
+                                               heightDimension: .estimated(200))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         return NSCollectionLayoutSection(group: group)
     }

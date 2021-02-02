@@ -17,7 +17,8 @@ final class UserSearchViewModel {
     let suggestedUsernames: [String] = [
         "withprimer",
         "loloop",
-        "CocoaHeadsConference"
+        "CocoaHeadsConference",
+        "Apple"
     ]
 }
 
