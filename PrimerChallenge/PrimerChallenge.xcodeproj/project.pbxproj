@@ -180,7 +180,7 @@
 		B495F72A25C8632F003A5AD5 /* PrimerChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				B495F7F925C8E41C003A5AD5 /* Dependencies */,
+				B495F7F925C8E41C003A5AD5 /* Dependency */,
 				B495F7C425C892B9003A5AD5 /* Debug */,
 				B495F77025C8754C003A5AD5 /* UserDetails */,
 				B495F74325C863F8003A5AD5 /* UserSearch */,
@@ -369,12 +369,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B495F7F925C8E41C003A5AD5 /* Dependencies */ = {
+		B495F7F925C8E41C003A5AD5 /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
 				B495F7FA25C8E426003A5AD5 /* KingImageLoader.swift */,
 			);
-			path = Dependencies;
+			path = Dependency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
